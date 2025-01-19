@@ -1,1 +1,3 @@
-//example
+const char* pingCommand(){
+	return "PONG";
+}
