@@ -1,1 +1,15 @@
-//example
+{
+	"PING":{
+		"description": "Responds with PONG to test connectivity.",
+		"complexity": "O(1)",
+		"group": "UTIL",
+		"since": "0.1.0",
+		"arity": 0,
+		"function": "ping_command",
+		"arguments": [],
+		"reply_schema": {
+			"type": "string",
+			"description": "Always return 'PONG'"
+		}
+	}
+}
