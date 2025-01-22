@@ -8,10 +8,11 @@ SRC_DIR = src
 CMD_DIR = $(SRC_DIR)/commands
 UTIL_DIR = $(CMD_DIR)/util
 NETWORK_DIR = $(SRC_DIR)/network
+PARSER_DIR = $(SRC_DIR)/parser
 BUILD_DIR = build
 
 # Arquivos
-SRCS = $(wildcard $(NETWORK_DIR)/*.c) $(wildcard $(UTIL_DIR)/*.c)
+SRCS = $(wildcard $(NETWORK_DIR)/*.c) $(wildcard $(UTIL_DIR)/*.c) $(wildcard $(PARSER_DIR)/*.c)
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 MAIN = main.c
 MAIN_OBJ = $(MAIN:.c=.o)
@@ -35,4 +36,3 @@ clean:
 	rm -rf $(BUILD_DIR) $(MAIN_OBJ) $(TARGET)
 
 .PHONY: all clean
-
