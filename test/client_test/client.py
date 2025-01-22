@@ -1,7 +1,7 @@
 import socket
 
 SERVER_HOST = '127.0.0.1'
-SERVER_PORT = 8080    
+SERVER_PORT = 8080
 
 def main():
     try:
@@ -10,7 +10,8 @@ def main():
         client_socket.connect((SERVER_HOST, SERVER_PORT))
         print(f"[info] Conectado ao servidor em {SERVER_HOST}:{SERVER_PORT}")
         
-        message = "PING 123 456"
+        message = "UTIL.PING 123 456"
+        
         client_socket.sendall(message.encode())
         print(f"[info] Mensagem enviada: {message}")
         
